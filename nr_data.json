@@ -1,0 +1,27 @@
+{
+  "login": {
+    "username": "usr",
+    "password": "n/a"
+  },
+  "test_client": {
+    "id": "03100554546",
+    "name": "Rosanas",
+    "lastname": "Tavarez",
+    "nickname": "Rosi",
+    "birthDate": "1999-02-11",
+    "email": "rota02@gmail.com",
+    "phone": "8492220000",
+    "telephone": "8492220000",
+    "zone": "6 - JARABACOA",
+    "address": "Calle 2",
+    "timeAddress": "2 años",
+    "numDependientes": "1",
+    "salary": "20000",
+    "expenses": "15000",
+    "occupation": "Secretaria",
+    "jobPhone": "8092537755",
+    "jobAddress": "Calle 10, plaza central",
+    "reference": "Juan Lopez",
+    "referencePhone": "8293334678"
+  }
+}

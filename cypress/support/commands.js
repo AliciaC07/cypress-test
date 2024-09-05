@@ -23,3 +23,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('login', (email, password) => {
+  cy.visit("https://develop.neoroutemee.com/auth/login");
+  cy.get("input[type=text]").should('be.visible').type(email);
+  cy.get("input[type=password]").should('be.visible').type(password);
+  cy.get("span").contains(" Iniciar Sesión").click();
+})
