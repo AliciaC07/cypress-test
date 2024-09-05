@@ -1,0 +1,25 @@
+{
+  "name": "cypress-test",
+  "version": "1.0.0",
+  "description": "Testing Framework Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "cypress:open": "cypress open"
+  },
+  "keywords": [
+    "automation",
+    "framework",
+    "cypress"
+  ],
+  "author": "Alicia",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.14.1",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-real-events": "^1.13.0"
+  },
+  "dependencies": {
+    "cypress-test": "file:"
+  }
+}
