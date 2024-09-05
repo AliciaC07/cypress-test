@@ -11,9 +11,9 @@ describe("Test for the client creation", () => {
   });
 
   it("user goes to create client", () => {
-    cy.get("app-sidebar .sidenav") // Ajusta el selector según la estructura de tu HTML
-      .trigger("mouseover"); // Simula el hover sobre el sidebar
-    cy.get('a[href="/client/client-list"]') // Selector del enlace que deseas hacer clic
+    cy.get("app-sidebar .sidenav") 
+      .trigger("mouseover"); 
+    cy.get('a[href="/client/client-list"]')
       .click();
 
     cy.get("span").contains("Registrar Cliente").click();
