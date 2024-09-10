@@ -1,5 +1,6 @@
 const { defineConfig } = require("cypress");
-const { readFileSync } = require('fs-extra')
+const { readFileSync } = require('fs-extra');
+const path = require('path');
 
 const e2eConfig = {
   pageLoadTimeout: 60000,
@@ -8,7 +9,8 @@ const e2eConfig = {
   specPattern: ['cypress/e2e/NR/**.spec.js'],
   setupNodeEvents(on, config) {
     // implement node event listeners here
-    const text = readFileSync('nr_data.json');
+    const jsonPath = process.env.CYPRESS_nr_data_path || 'nr_data.json';
+    const text = readFileSync(path.resolve(__dirname, jsonPath), 'utf8');
     const values = JSON.parse(text);
     config.env = {
       ...values,
