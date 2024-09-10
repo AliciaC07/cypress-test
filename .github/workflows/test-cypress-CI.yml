@@ -21,11 +21,15 @@ jobs:
         with:
           build: npm run test
         env:
-          CYPRESS_username: ${{secrets.CYPRESS_USERNAME}}
-          CYPRESS_password: ${{secrets.CYPRESS_PASSWORD}}  
+          CYPRESS_login_username: ${{secrets.CYPRESS_USERNAME}}
+          CYPRESS_login_password: ${{secrets.CYPRESS_PASSWORD}}  
      
       - uses: actions/upload-artifact@v2
         if: always()
         with:
           name: cypress-screenshots
           path: ./cypress/screenshots     
+      
+      - name: Publish Test Summary Results
+        run: npx github-actions-ctrf ctrf/ctrf-report.json     
+  
