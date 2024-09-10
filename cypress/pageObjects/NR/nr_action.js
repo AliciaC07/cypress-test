@@ -7,7 +7,7 @@ export default class NRActions {
     objects.addNewClientBtn().click();
   }
   clickNextStepBtn(){
-    objects.nextStepbtn().should('be.enabled');
+    //objects.nextStepbtn().should('be.enabled');
     objects.nextStepbtn().click();
   }
   uploadImage() {

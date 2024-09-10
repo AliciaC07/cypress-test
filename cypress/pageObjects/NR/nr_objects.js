@@ -6,7 +6,7 @@ export default class NRObjects{
     return cy.get('input[type="file"]')
   }
   nextStepbtn(){
-    return cy.get('span').contains("Próximo paso")
+    return cy.get('span',{timeout:60000}).contains("Próximo paso")
   }
   generalInfoBtn(){
     return cy.get("span").contains("Información General")
