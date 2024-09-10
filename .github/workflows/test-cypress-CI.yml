@@ -29,9 +29,6 @@ jobs:
           # Usa sed para reemplazar el contenido del campo "login" en nr_data_temp.json
           sed -i 's/"username": ".*"/"username": "${{ secrets.CYPRESS_USERNAME }}"/' nr_data_temp.json
           sed -i 's/"password": ".*"/"password": "${{ secrets.CYPRESS_PASSWORD }}"/' nr_data_temp.json  
-
-      - name: Verify temp file
-        run: cat nr_data_temp.json
         
       - name: Cypress run
         uses: cypress-io/github-action@v6
