@@ -12,6 +12,7 @@ const client = Cypress.env().test_client;
 describe("Test for the client creation", () => {
   beforeEach(() => {
     cy.login(email, password)
+    cy.log('user is logged');
   });
 
   it("user goes to create client", () => {
