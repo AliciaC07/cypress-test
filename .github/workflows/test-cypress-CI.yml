@@ -46,5 +46,5 @@ jobs:
       
       - name: Publish Test Summary Results
         if: always()
-        run: npx mochawesome-merge ./cypress/reports/*.json > ./cypress/reports/merged-report.json   
+        run: npx mochawesome-merge ./cypress/reports/.jsons/*.json > ./cypress/reports/merged-report.json   
   
