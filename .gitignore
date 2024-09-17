@@ -126,6 +126,7 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-.fixtures/login_creds.json
+nr_data.json
 cypress/reports
 cypress/screenshots
+ctrf/*

@@ -17,7 +17,7 @@
 import './commands'
 import 'cypress-file-upload';
 import 'cypress-real-events';
-
+import 'cypress-ctrf-json-reporter';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

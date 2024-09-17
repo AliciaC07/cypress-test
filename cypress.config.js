@@ -1,18 +1,12 @@
 const { defineConfig } = require("cypress");
 const { readFileSync } = require('fs-extra');
+const { GenerateCtrfReport } = require('cypress-ctrf-json-reporter')
 const path = require('path');
 
 const e2eConfig = {
   pageLoadTimeout: 60000,
   baseUrl: "https://develop.neoroutemee.com/auth/login",
   defaultCommandTimeout: 60000,
-  reporter: 'cypress-mochawesome-reporter',
-  reporterOptions: {
-    reportDir: 'cypress/reports',
-    overwrite: false,
-    html: false,
-    json: true
-  },
   specPattern: ['cypress/e2e/NR/**.spec.js'],
   setupNodeEvents(on, config) {
     // implement node event listeners here
@@ -22,6 +16,11 @@ const e2eConfig = {
     config.env = {
       ...values,
     };
+    new GenerateCtrfReport({
+      on,
+      outputDir: 'cypress/reports',
+      outputFile: 'results.json',
+    });
     return config;
   },
 };
