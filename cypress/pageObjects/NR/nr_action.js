@@ -12,7 +12,7 @@ export default class NRActions {
   }
   uploadImage() {
     objects.attachFileinput().attachFile("image.png")
-    objects.nextStepbtn().click()
+    objects.nextStepbtn().realClick()
     objects.attachFileinput().attachFile("image.png")
   }
   fillGeneralInfoForm(client) {
