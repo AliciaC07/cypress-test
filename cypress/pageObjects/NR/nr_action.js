@@ -8,7 +8,7 @@ export default class NRActions {
   }
   clickNextStepBtn(){
     //objects.nextStepbtn().should('be.enabled');
-    objects.nextStepbtn().click();
+    objects.nextStepbtn().realClick();
   }
   uploadImage() {
     objects.attachFileinput().attachFile("image.png")
