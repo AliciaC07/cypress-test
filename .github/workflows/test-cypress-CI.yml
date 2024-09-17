@@ -37,7 +37,7 @@ jobs:
         env:
           CYPRESS_nr_data_path: ./nr_data_temp.json
      
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4.4.0
         if: always()
         with:
           name: cypress-screenshots
