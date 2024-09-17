@@ -1,4 +1,5 @@
 import NRObjects from "./nr_objects";
+import 'cypress-real-events';
 
 const objects = new NRObjects()
 
