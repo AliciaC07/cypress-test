@@ -46,5 +46,5 @@ jobs:
       
       - name: Publish Test Summary Results
         if: always()
-        run: npx github-actions-ctrf /cypress/reports/.jsons/*.json     
+        run: npx github-actions-ctrf ./cypress/reports/.jsons/*.json     
   
