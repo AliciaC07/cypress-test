@@ -8,9 +8,6 @@ export default class NRObjects{
   nextStepbtn(){
     return cy.get('span',{timeout:60000}).contains("Próximo paso")
     .should('be.visible') // Verifica que sea visible
-    .then(() => {
-      cy.wait(2000); // Espera 2 segundos después de confirmar que el botón está habilitado
-    });
   }
   generalInfoBtn(){
     return cy.get("span").contains("Información General")
