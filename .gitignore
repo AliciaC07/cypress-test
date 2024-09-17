@@ -127,3 +127,5 @@ dist
 .pnp.*
 
 .fixtures/login_creds.json
+cypress/reports
+cypress/screenshots

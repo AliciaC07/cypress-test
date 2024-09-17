@@ -21,6 +21,7 @@
     "fs-extra": "^11.2.0"
   },
   "dependencies": {
+    "cypress-mochawesome-reporter": "^3.8.2",
     "cypress-test": "file:"
   }
 }

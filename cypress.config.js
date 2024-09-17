@@ -6,6 +6,13 @@ const e2eConfig = {
   pageLoadTimeout: 60000,
   baseUrl: "https://develop.neoroutemee.com/auth/login",
   defaultCommandTimeout: 60000,
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    reportDir: 'cypress/reports',
+    overwrite: false,
+    html: false,
+    json: true
+  },
   specPattern: ['cypress/e2e/NR/**.spec.js'],
   setupNodeEvents(on, config) {
     // implement node event listeners here
